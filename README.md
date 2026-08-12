@@ -88,6 +88,23 @@ Define `SCRIPT_DEBUG` as `true` to load the unminified script.
 - PHP 7.0+
 - jQuery (bundled with WordPress)
 
+### Releasing (maintainers)
+
+This repo is the source of truth; the [wordpress.org SVN repo](https://plugins.svn.wordpress.org/inlarge/)
+is synced automatically by [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
+on every tag push. To ship a new version:
+
+1. Bump the version in `inlarge.php` (`Version:` header and `INLARGE_VERSION`) and in `readme.txt` (`Stable tag:`), and add a changelog entry to `readme.txt`.
+2. Commit, then tag with the bare version number (no `v` prefix) and push the tag:
+   ```bash
+   git tag 1.2.1
+   git push origin 1.2.1
+   ```
+3. The workflow builds the plugin per `.distignore` and pushes it to SVN `trunk` and a matching `tags/1.2.1`.
+
+One-time setup: add `SVN_USERNAME` and `SVN_PASSWORD` (your wordpress.org account) as
+[repo secrets](https://github.com/kyocom/inlarge/settings/secrets/actions).
+
 ### License
 
 [MIT](LICENSE) © kyocom (Kyo Ichida)

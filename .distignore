@@ -1,0 +1,9 @@
+.git
+.github
+.gitignore
+.distignore
+.DS_Store
+README.md
+*.zip
+node_modules
+.editorconfig
