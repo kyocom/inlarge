@@ -4,7 +4,7 @@ Tags: image, zoom, enlarge, lightbox, gallery
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 7.0
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -67,6 +67,9 @@ Define `SCRIPT_DEBUG` as `true` in `wp-config.php` and the plugin loads the non-
 2. After one click — the image is enlarged in place and swapped to the high-resolution file. No overlay, no dimming: the article text below stays readable and the scroll position never moves. Click again to restore.
 
 == Changelog ==
+
+= 1.2.2 =
+* Stop shipping the directory-assets folder (icon and screenshots) inside the plugin download — it belongs only in the wordpress.org assets area. Cuts the download back to its normal size; no functional change.
 
 = 1.2.1 =
 * **Changed default:** "Apply to WordPress galleries" is now **off** by default and opt-in per post. Gallery markup varies between themes, so galleries are no longer touched unless you ask for them. Posts where you had already unticked the box are unaffected; posts relying on the old default need the box ticked to keep enlarging gallery images.

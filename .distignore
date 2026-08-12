@@ -4,6 +4,9 @@
 .distignore
 .DS_Store
 README.md
+# Directory assets (icon, screenshots): published to SVN assets/, never shipped
+# inside the plugin download.
+.wordpress-org
 *.zip
 node_modules
 .editorconfig
