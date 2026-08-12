@@ -3,7 +3,7 @@
  * Plugin Name:       Inlarge – Inline Image Zoom
  * Plugin URI:        https://github.com/kyocom/inlarge
  * Description:        Inline image zoom for WordPress powered by the abc-enlarge jQuery library. Enlarges images in place without covering the page, adds the enlarge class automatically, and lets you choose which post types it runs on.
- * Version:           1.2.0
+ * Version:           1.2.1
  * Requires at least: 5.0
  * Requires PHP:      7.0
  * Author:            Kyo Ichida
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // No direct access.
 }
 
-define( 'INLARGE_VERSION', '1.2.0' );
+define( 'INLARGE_VERSION', '1.2.1' );
 define( 'INLARGE_FILE', __FILE__ );
 define( 'INLARGE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'INLARGE_URL', plugin_dir_url( __FILE__ ) );
@@ -32,10 +32,10 @@ define( 'INLARGE_URL', plugin_dir_url( __FILE__ ) );
 define( 'INLARGE_META_KEY', '_inlarge_disabled' );
 
 /**
- * Post meta key that, when truthy, excludes WordPress galleries.
- * Galleries are INCLUDED by default (absence of the flag == applied).
+ * Post meta key that, when truthy, includes WordPress galleries.
+ * Galleries are EXCLUDED by default (absence of the flag == not applied).
  */
-define( 'INLARGE_GALLERY_META_KEY', '_inlarge_galleries_disabled' );
+define( 'INLARGE_GALLERY_META_KEY', '_inlarge_galleries_enabled' );
 
 /**
  * Option name storing the plugin settings (which post types are enabled).
@@ -129,6 +129,9 @@ function inlarge_is_enabled_for_post( $post = null ) {
 /**
  * Whether Inlarge should also apply to WordPress galleries for the post.
  *
+ * Galleries are opt-in: a gallery image is only made enlargeable when the
+ * per-post box is ticked, since gallery markup varies between themes.
+ *
  * @param int|WP_Post|null $post Post ID or object. Defaults to current post.
  * @return bool True when galleries are included.
  */
@@ -138,7 +141,7 @@ function inlarge_galleries_enabled_for_post( $post = null ) {
 		return false;
 	}
 
-	$disabled = (bool) get_post_meta( $post->ID, INLARGE_GALLERY_META_KEY, true );
+	$enabled = (bool) get_post_meta( $post->ID, INLARGE_GALLERY_META_KEY, true );
 
 	/**
 	 * Filter whether Inlarge applies to galleries for a specific post.
@@ -146,7 +149,7 @@ function inlarge_galleries_enabled_for_post( $post = null ) {
 	 * @param bool    $enabled Whether galleries are included.
 	 * @param WP_Post $post    The post object.
 	 */
-	return (bool) apply_filters( 'inlarge_galleries_enabled_for_post', ! $disabled, $post );
+	return (bool) apply_filters( 'inlarge_galleries_enabled_for_post', $enabled, $post );
 }
 
 /**

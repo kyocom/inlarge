@@ -2,7 +2,7 @@
 # This file is distributed under the MIT license.
 msgid ""
 msgstr ""
-"Project-Id-Version: Inlarge - Inline Image Zoom 1.2.0\n"
+"Project-Id-Version: Inlarge - Inline Image Zoom 1.2.1\n"
 "Report-Msgid-Bugs-To: https://github.com/kyocom/inlarge/issues\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,7 @@ msgid "Apply to WordPress galleries"
 msgstr ""
 
 #: includes/class-inlarge-admin.php:109
-msgid "On by default. Makes images in WordPress galleries enlargeable regardless of their link setting."
+msgid "Off by default. Check this to make images in WordPress galleries enlargeable regardless of their link setting."
 msgstr ""
 
 #: includes/class-inlarge-settings.php:84

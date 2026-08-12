@@ -85,7 +85,7 @@ class Inlarge_Admin {
 	 */
 	public static function render_meta_box( $post ) {
 		$enabled           = ! (bool) get_post_meta( $post->ID, INLARGE_META_KEY, true );
-		$galleries_enabled = ! (bool) get_post_meta( $post->ID, INLARGE_GALLERY_META_KEY, true );
+		$galleries_enabled = (bool) get_post_meta( $post->ID, INLARGE_GALLERY_META_KEY, true );
 
 		wp_nonce_field( self::NONCE_ACTION, self::NONCE_NAME );
 		?>
@@ -106,7 +106,7 @@ class Inlarge_Admin {
 			</label>
 		</p>
 		<p class="description">
-			<?php esc_html_e( 'On by default. Makes images in WordPress galleries enlargeable regardless of their link setting.', 'inlarge' ); ?>
+			<?php esc_html_e( 'Off by default. Check this to make images in WordPress galleries enlargeable regardless of their link setting.', 'inlarge' ); ?>
 		</p>
 		<?php
 	}
@@ -151,10 +151,10 @@ class Inlarge_Admin {
 			update_post_meta( $post_id, INLARGE_META_KEY, true );
 		}
 
-		// Galleries are applied by default; store only the "excluded" state.
-		$galleries_disabled = empty( $_POST['inlarge_galleries'] );
+		// Galleries are opt-in; store only the "included" state.
+		$galleries_enabled = ! empty( $_POST['inlarge_galleries'] );
 
-		if ( $galleries_disabled ) {
+		if ( $galleries_enabled ) {
 			update_post_meta( $post_id, INLARGE_GALLERY_META_KEY, true );
 		} else {
 			delete_post_meta( $post_id, INLARGE_GALLERY_META_KEY );

@@ -17,7 +17,7 @@
 - 🖼️ **Inline zoom** — no overlay; enlarges the clicked image in place while surrounding text stays readable.
 - 🔍 **High-res swap** — swaps to the large image from the link's `href`, restores the small one on collapse.
 - 📱 **Touch-friendly** — on portrait phones the image expands into a horizontally scrollable, auto-centered view.
-- 🧩 **Gallery support** — classic `[gallery]` and block galleries become enlargeable regardless of link setting. On by default, toggleable per post.
+- 🧩 **Gallery support** — classic `[gallery]` and block galleries can be made enlargeable regardless of link setting. Off by default, opt in per post.
 - ⚙️ **Post-type settings** — a settings page to pick which post types (post, page, custom post types) enlargement runs on. All eligible types on by default.
 - 🎛️ **Per-post toggles** — disable enlargement, or exclude galleries, on any individual post/page. **Both on by default.**
 
@@ -32,7 +32,7 @@ to its **Media File**. Unlinked images are left untouched so they never break.
 <a href="large.jpg"><img class="abc-enlarge" src="small.jpg" width="400" height="300"></a>
 ```
 
-**Inside WordPress galleries** (option on by default): images are made
+**Inside WordPress galleries** (opt in per post; off by default): images are made
 enlargeable no matter their link setting. The plugin resolves a full-size URL
 from the image's attachment ID (`wp-image-{id}`) or by dropping the `-WxH`
 resize suffix, and falls back to the image's own `src` — so it never swaps in
@@ -59,7 +59,7 @@ Within an enabled post type, each post can still be tuned. In the **Inlarge**
 box (bottom of the block editor, or the sidebar in the classic editor):
 
 - **Enable image enlargement for this post** — checked by default; uncheck to turn the whole feature off for that post.
-- **Apply to WordPress galleries** — on by default; uncheck to exclude gallery images while keeping normal linked images enlargeable.
+- **Apply to WordPress galleries** — off by default; tick it to also enlarge images inside classic and block galleries.
 
 ### Developer hooks
 
@@ -119,9 +119,9 @@ One-time setup: add `SVN_USERNAME` and `SVN_PASSWORD` (your wordpress.org accoun
 - 🖼️ **インライン拡大** — オーバーレイなし。クリックした画像をその場で拡大し、周囲の文章は読めるまま。
 - 🔍 **高解像度差し替え** — リンクの `href` に指定した大きい画像へ差し替え、縮小時に元へ復元。
 - 📱 **タッチ端末対応** — スマホ縦画面では横スクロール可能なビューへ拡大し、中央へ自動スクロール。
-- 🧩 **ギャラリー対応** — クラシック `[gallery]` とブロックギャラリーを、リンク設定に関わらず拡大可能に。デフォルト有効・post 単位で切替可。
+- 🧩 **ギャラリー対応** — クラシック `[gallery]` とブロックギャラリーも、リンク設定に関わらず拡大可能にできます。**デフォルトは無効**・post 単位でオンにします。
 - ⚙️ **投稿タイプ設定** — 設定ページで、拡大を動作させる投稿タイプ（post / page / カスタム投稿タイプ）を選択。対象候補はすべてデフォルト有効。
-- 🎛️ **post 単位のオプション** — 各投稿・固定ページで「拡大の無効化」と「ギャラリー除外」を切替。**どちらもデフォルト有効**。
+- 🎛️ **post 単位のオプション** — 各投稿・固定ページで「拡大の有効/無効」（既定は有効）と「ギャラリーへの適用」（既定は無効）を切替。
 
 ### 付与対象について
 
@@ -130,7 +130,7 @@ One-time setup: add `SVN_USERNAME` and `SVN_PASSWORD` (your wordpress.org accoun
 これは画像のリンク先を **「メディアファイル」** にしたときの WordPress 出力そのもの
 です。リンクのない画像は対象外なので、クリックで画像が壊れることはありません。
 
-**WordPress ギャラリー内**（オプションはデフォルト有効）：リンク設定に関わらず
+**WordPress ギャラリー内**（オプションはデフォルト無効・post 単位でオン）：リンク設定に関わらず
 ギャラリー画像を拡大可能にします。フル画像URLを添付ファイルID（`wp-image-{id}`）
 や `-幅x高さ` のリサイズ接尾辞除去から解決し、最終的には画像自身の `src` に
 フォールバックするため、画像以外に差し替わることはなく、画像が壊れません。
@@ -155,7 +155,7 @@ One-time setup: add `SVN_USERNAME` and `SVN_PASSWORD` (your wordpress.org accoun
 ボックス（ブロックエディターでは画面下部、クラシックエディターではサイドバー）:
 
 - **この投稿で画像拡大を有効にする** — デフォルトでチェック済み。外すとその投稿の拡大機能を丸ごとオフにします。
-- **WordPress ギャラリーにも適用** — デフォルト有効。オフにすると通常のリンク画像は拡大したまま、ギャラリー画像だけを対象外にできます。
+- **WordPress ギャラリーにも適用** — **デフォルト無効**。オンにすると、クラシック／ブロック両ギャラリー内の画像も拡大対象になります。
 
 ### 開発者向けフック
 
