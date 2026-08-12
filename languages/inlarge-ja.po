@@ -1,55 +1,58 @@
+# Japanese translation for Inlarge – Inline Image Zoom.
 # Copyright (C) 2026 Kyo Ichida
 # This file is distributed under the MIT license.
 msgid ""
 msgstr ""
 "Project-Id-Version: Inlarge - Inline Image Zoom 1.2.3\n"
 "Report-Msgid-Bugs-To: https://github.com/kyocom/inlarge/issues\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2026-08-12T00:00:00+00:00\n"
+"PO-Revision-Date: 2026-08-12 22:00+0900\n"
+"Last-Translator: Kyo Ichida\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-07-24T00:00:00+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Domain: inlarge\n"
 
 #: includes/class-inlarge-admin.php:72 includes/class-inlarge-settings.php:36
 #: includes/class-inlarge-settings.php:37 includes/class-inlarge-settings.php:101
 msgid "Inlarge"
-msgstr ""
+msgstr "Inlarge"
 
 #: includes/class-inlarge-admin.php:95
 msgid "Enable image enlargement for this post"
-msgstr ""
+msgstr "この投稿で画像の拡大を有効にする"
 
 #: includes/class-inlarge-admin.php:99
 msgid "Checked by default. Uncheck to turn enlargement off for this post only."
-msgstr ""
+msgstr "初期状態はオンです。この投稿だけ拡大を止めたいときは、チェックを外してください。"
 
 #: includes/class-inlarge-admin.php:105
 msgid "Apply to WordPress galleries"
-msgstr ""
+msgstr "WordPress のギャラリーにも適用する"
 
 #: includes/class-inlarge-admin.php:109
 msgid "Off by default. Check this to make images in WordPress galleries enlargeable regardless of their link setting."
-msgstr ""
+msgstr "初期状態はオフ。オンにすると、リンク設定にかかわらずギャラリー内の画像も拡大できます。"
 
 #: includes/class-inlarge-settings.php:84
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: includes/class-inlarge-settings.php:104
 msgid "Enabled post types"
-msgstr ""
+msgstr "有効にする投稿タイプ"
 
 #: includes/class-inlarge-settings.php:106
 msgid "Image enlargement runs only on the post types you check here. Unchecked post types are disabled."
-msgstr ""
+msgstr "ここでチェックした投稿タイプでのみ拡大が動きます。外したものは対象になりません。"
 
 #: includes/class-inlarge-settings.php:111
 msgid "Post types"
-msgstr ""
+msgstr "投稿タイプ"
 
 #: includes/class-inlarge-settings.php:129
 msgid "No eligible post types were found."
-msgstr ""
+msgstr "対象となる投稿タイプが見つかりません。"

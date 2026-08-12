@@ -3,7 +3,7 @@
  * Plugin Name:       Inlarge – Inline Image Zoom
  * Plugin URI:        https://github.com/kyocom/inlarge
  * Description:        Inline image zoom for WordPress powered by the abc-enlarge jQuery library. Enlarges images in place without covering the page, adds the enlarge class automatically, and lets you choose which post types it runs on.
- * Version:           1.2.2
+ * Version:           1.2.3
  * Requires at least: 5.0
  * Requires PHP:      7.0
  * Author:            Kyo Ichida
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // No direct access.
 }
 
-define( 'INLARGE_VERSION', '1.2.2' );
+define( 'INLARGE_VERSION', '1.2.3' );
 define( 'INLARGE_FILE', __FILE__ );
 define( 'INLARGE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'INLARGE_URL', plugin_dir_url( __FILE__ ) );

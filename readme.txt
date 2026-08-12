@@ -4,7 +4,7 @@ Tags: image, zoom, enlarge, lightbox, gallery
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 7.0
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -23,6 +23,28 @@ Inlarge brings the [abc-enlarge](https://github.com/kyocom/abc-enlarge) jQuery l
 * On portrait phones, expands the image into a horizontally scrollable, auto-centered view.
 * Can also apply to WordPress galleries (classic and block), making those images enlargeable regardless of their link setting. Off by default — tick it per post.
 * Lets you disable enlargement per post — enabled by default.
+
+= 日本語 =
+
+Inlarge は、jQuery ライブラリ [abc-enlarge](https://github.com/kyocom/abc-enlarge) を WordPress に組み込んだプラグインです。よくあるライトボックスは画面全体を暗く覆い、読んでいた文章を隠してしまいます。Inlarge にオーバーレイはありません。クリックした画像をその場で大きくするだけなので、周囲の本文は読めるまま。ウェブマガジンや長文記事のように、写真も文章も同時に見せたい場面に向いています。
+
+👉 **[ライブデモを試す](https://kyocom.github.io/abc-enlarge/demo/index.html)** — 画像をクリックすると、文章が流れたまま拡大される様子を確認できます。
+
+**主な機能**
+
+* 本文中のリンク付き画像に `abc-enlarge` クラスを自動で付与します。画像ファイルへのリンクで囲まれたものだけが対象なので、レイアウトは崩れません。
+* クリックするとリンク先の高解像度画像に差し替えて拡大。もう一度クリックすれば元に戻ります。
+* スマートフォンを縦に持っているときは、横スクロールできる表示に広げ、中央へ自動でスクロールします。
+* WordPress のギャラリー（クラシック・ブロックとも）にも適用できます。リンク設定にかかわらず拡大できるようになりますが、**初期状態はオフ**。投稿ごとにチェックを入れてお使いください。
+* 投稿単位で拡大を止められます（初期状態は有効）。
+
+**使い方**
+
+「設定 → Inlarge」で、拡大を動かす投稿タイプ（投稿・固定ページ・カスタム投稿タイプ）にチェックを入れます。チェックしたものだけが有効で、初期状態では対象すべてに入っています。
+
+投稿の編集画面には「Inlarge」ボックスが表示され、そこで投稿ごとに調整できます。ブロックエディターなら画面下部、クラシックエディターなら右側のサイドバーです。「この投稿で画像の拡大を有効にする」は初期状態でオン。「WordPress のギャラリーにも適用する」は初期状態でオフなので、ギャラリー内の画像も拡大したいときにオンへ切り替えます。
+
+本文の画像は、リンク先を「メディアファイル」にしておいてください。それだけで自動的に拡大の対象になります。
 
 == Installation ==
 
@@ -67,6 +89,9 @@ Define `SCRIPT_DEBUG` as `true` in `wp-config.php` and the plugin loads the non-
 2. After one click — the image is enlarged in place and swapped to the high-resolution file. No overlay, no dimming: the article text below stays readable and the scroll position never moves. Click again to restore.
 
 == Changelog ==
+
+= 1.2.3 =
+* Japanese: bundled `ja` translation for the admin screens, and a Japanese section in the plugin description.
 
 = 1.2.2 =
 * Stop shipping the directory-assets folder (icon and screenshots) inside the plugin download — it belongs only in the wordpress.org assets area. Cuts the download back to its normal size; no functional change.
