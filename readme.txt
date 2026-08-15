@@ -2,9 +2,9 @@
 Contributors: kyo-ichida
 Tags: image, zoom, enlarge, lightbox, gallery
 Requires at least: 5.0
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.0
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -67,6 +67,10 @@ Define `SCRIPT_DEBUG` as `true` in `wp-config.php` and the plugin loads the non-
 2. After one click — the image is enlarged in place and swapped to the high-resolution file. No overlay, no dimming: the article text below stays readable and the scroll position never moves. Click again to restore.
 
 == Changelog ==
+
+= 1.2.5 =
+* Tested up to WordPress 7.1.
+* New plugin icon.
 
 = 1.2.4 =
 * Remove the Japanese section from the description. The readme is now translated properly through translate.wordpress.org, so ja.wordpress.org shows a fully Japanese page and the English page stays English. The bundled `ja` translation for the admin screens is unchanged.
