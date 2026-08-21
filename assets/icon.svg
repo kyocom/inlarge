@@ -34,19 +34,15 @@
     </linearGradient>
   </defs>
   <g id="text">
-    <rect class="st1" width="256" height="256"/>
     <path class="st3" d="M195.4,239.4H16.8v-16.2h178.6v16.2ZM238,210H16.8v-16.2h221.2v16.2ZM238,180.6H16.8v-16.2h221.2v16.2ZM195.4,151.2H16.8v-16.2h178.6v16.2ZM238,121.8h-85.1v-16.2h85.1v16.2ZM238,92.4h-85.1v-16.2h85.1v16.2ZM238,63h-85.1v-16.2h85.1v16.2ZM238,33.6h-85.1v-16.2h85.1v16.2Z"/>
   </g>
   <g id="img">
     <rect class="st0" x="16.8" y="17.3" width="120" height="90" rx="10.8" ry="10.8"/>
     <circle class="st1" cx="108" cy="44" r="12.1"/>
-    <polygon class="st1" points="126.1 115 19.3 115 66.8 66 83.5 68.8 126.1 115"/>
+    <polygon class="st1" points="118 107.3 27.6 107.3 66.8 66 83.5 68.8 118 107.3"/>
   </g>
   <g id="arrow">
     <polyline class="st2" points="9.3 29.8 9.3 9.8 29.3 9.8"/>
-    <polyline class="st2" points="246 125.8 246 145.8 226 145.8"/>
-    <circle cx="236" cy="135.8" r="2.5"/>
-    <circle cx="226" cy="128.8" r="2.5"/>
-    <circle cx="216" cy="121.8" r="2.5"/>
+    <polyline class="st2" points="246 129.8 246 149.8 226 149.8"/>
   </g>
 </svg>

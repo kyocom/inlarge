@@ -1,10 +1,10 @@
 === Inlarge – Inline Image Zoom ===
 Contributors: kyo-ichida
-Tags: image, zoom, enlarge, lightbox, gallery
+Tags: zoom, enlarge, lightbox, gallery, magazine
 Requires at least: 5.0
 Tested up to: 7.1
 Requires PHP: 7.0
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -23,6 +23,7 @@ Inlarge brings the [abc-enlarge](https://github.com/kyocom/abc-enlarge) jQuery l
 * On portrait phones, expands the image into a horizontally scrollable, auto-centered view.
 * Can also apply to WordPress galleries (classic and block), making those images enlargeable regardless of their link setting. Off by default — tick it per post.
 * Lets you disable enlargement per post — enabled by default.
+* Runs on one very small JavaScript file. No extra CSS file is loaded.
 
 == Installation ==
 
@@ -61,12 +62,22 @@ Yes. The script and auto-class run on every singular view, and the per-post togg
 
 Define `SCRIPT_DEBUG` as `true` in `wp-config.php` and the plugin loads the non-minified build.
 
+= Clicking the enlarged image again does not restore it =
+
+Another image-zoom plugin on the page is most likely taking over the second click. prettyPhoto and similar lightboxes are known to do this, so the image stays enlarged instead of collapsing back. PhotoSwipe-based plugins run alongside Inlarge without this problem.
+
 == Screenshots ==
 
 1. Before — the image sits inline in the article at its normal size.
 2. After one click — the image is enlarged in place and swapped to the high-resolution file. No overlay, no dimming: the article text below stays readable and the scroll position never moves. Click again to restore.
 
 == Changelog ==
+
+= 1.2.6 =
+* Plugin icon now has a solid white background instead of a transparent one.
+* Note in the description that the plugin loads a single small JavaScript file and no extra CSS.
+* New FAQ entry about other zoom plugins taking over the click that restores an enlarged image.
+* Swap the generic `image` tag for `magazine` (the directory allows five).
 
 = 1.2.5 =
 * Tested up to WordPress 7.1.
